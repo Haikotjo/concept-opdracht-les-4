@@ -329,3 +329,5 @@ Have a question? Need a quote? Let us know!
 #### Footer
 
 Business website opdracht © NOVI Hogeschool 2022
+#   c o n c e p t - o p d r a c h t  
+ 
