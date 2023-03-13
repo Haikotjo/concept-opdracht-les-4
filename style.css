@@ -1,0 +1,250 @@
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+/*Paars #5722CD;*/
+/*Blauw #4845E4;*/
+/*Roze #ED4385;*/
+/*Zwart #0C0C0C (voor standaard tekst);*/
+/*Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen:*/
+/*                                                                                 Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)*/
+/*Grijs #7A7A7A (voor de service-tegel tekst);*/
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+/* --------------- 4.1 Header ------------------------- */
+
+header{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background: linear-gradient(90deg, rgba(72,69,228,1) 35%, rgba(87,34,205,1) 100%);
+}
+.navigation {
+    display: flex;
+    flex-direction: row-reverse;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(90deg, rgba(72,69,228,1) 35%, rgba(87,34,205,1) 100%);
+}
+.navigation a {
+    margin-inline: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: x-small;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 1200px;
+    align-items: center;
+    margin-inline: 50px;
+}
+
+header h1 {
+    text-align: center;
+    margin: 5px;
+    color: white;
+}
+
+header p {
+    margin: 5px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+header button {
+    padding: 10px;
+    padding-inline: 25px;
+    background-color: #ED4385;
+    border-radius: 20px;
+    border: none;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,5.2);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: xx-small;
+    text-transform: uppercase;
+}
+
+/* --------------- 4.2 Introduction ------------------- */
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 1200px;
+    align-items: center;
+    margin-inline: 50px;
+}
+
+.intro-container {
+    display: flex;
+}
+
+.intro h4 {
+    text-align: center;
+    margin: 10px;
+    color: #5722CD;
+}
+
+.intro a {
+    color: #5722CD;
+}
+
+.intro p {
+    margin-block: 30px;
+    font-size: smaller;
+}
+
+/* ------------------------------- 4.3 proects -------------------------------- */
+
+.work-articles {
+    display: flex;
+    flex-direction: column;
+}
+
+.work-articles h3 {
+    margin: 5px;
+}
+
+.work-articles p {
+    margin-top: 30px;
+}
+
+.work {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,2.2)
+}
+
+.work-articles :nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.work-articles :nth-child(even) .article-text{
+    margin-left: 50px;
+    margin-right: 40px;
+}
+
+.article-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    margin-right: 70px;
+}
+
+.article-text p {
+    font-size: x-small;
+}
+
+img {
+    width: 100%;
+}
+
+.image-wrapper {
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.article-link {
+    text-transform: uppercase;
+    font-size: xx-small;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: #5722CD;
+    margin-top: 20px;
+}
+
+/* ------------------------------- 4.4 services -------------------------------- */
+
+.services-container {
+display: flex;
+}
+
+.services {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 1600px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.services p {
+    font-size: xx-small;
+}
+
+.services h5 {
+    font-size: x-small;
+}
+
+h5 {
+    margin-bottom: 10px;
+    color: #5722CD;
+}
+
+.tile {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    border: #5722CD solid 1px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,1.2);
+}
+
+.tile img {
+    width: 30%;
+    margin-bottom: 5px;
+}
+
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+@media only screen and (max-width: 767px) {
+
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+@media only screen and (min-width: 1200px) {
+
+}
+
+
+
