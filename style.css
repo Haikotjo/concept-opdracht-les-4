@@ -22,6 +22,7 @@
 /* ------------------------------- 2. Typography ----------------------------------- */
 body {
     font-family: 'Roboto', sans-serif;
+    color: var(--black-color);
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', serif;
@@ -30,15 +31,25 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --------------- 3.1 Reusables ----------------------- */
 
-/*Paars #5722CD;*/
-/*Blauw #4845E4;*/
-/*Roze #ED4385;*/
-/*Zwart #0C0C0C (voor standaard tekst);*/
-/*Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen:*/
-/*                                                                                 Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)*/
-/*Grijs #7A7A7A (voor de service-tegel tekst);*/
+:root {
+    --purple-color: #5722CD;
+    --blue-color: #4845E4;
+    --pink-color:  #ED4385;
+    --black-color: #0C0C0C;
+    --grey-color: #7A7A7A;
+    --light-purple-color: #F2F0FF;
+}
 
 /* --------------- 3.2 Other --------------------------- */
+
+/*.triangle {*/
+/*    width: 0;*/
+/*    height: 0;*/
+/*    border-left: 5px solid transparent;*/
+/*    border-right: 5px solid transparent;*/
+/*    border-bottom: 5px solid black;*/
+/*}*/
+
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 /* --------------- 4.1 Header ------------------------- */
@@ -86,7 +97,7 @@ header p {
 header button {
     padding: 10px;
     padding-inline: 25px;
-    background-color: #ED4385;
+    background-color: var(--pink-color);
     border-radius: 20px;
     border: none;
     margin: 10px;
@@ -97,6 +108,11 @@ header button {
     text-transform: uppercase;
 }
 
+.squiggle-top {
+    width: 30px;
+    margin-top: 20px;
+}
+
 /* --------------- 4.2 Introduction ------------------- */
 
 .intro {
@@ -104,7 +120,8 @@ header button {
     flex-direction: column;
     flex-basis: 1200px;
     align-items: center;
-    margin-inline: 50px;
+    margin-inline: 200px;
+    margin-block: 50px;
 }
 
 .intro-container {
@@ -118,7 +135,8 @@ header button {
 }
 
 .intro a {
-    color: #5722CD;
+    color: var(--purple-color);
+    text-decoration: none;
 }
 
 .intro p {
@@ -137,6 +155,11 @@ header button {
     margin: 5px;
 }
 
+.squiggle {
+    width: 40px;
+    margin-top: 5px;
+}
+
 .work-articles p {
     margin-top: 30px;
 }
@@ -146,7 +169,7 @@ header button {
     flex-direction: row;
     align-items: center;
     margin: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,2.2)
+    background-color: lightgrey;
 }
 
 .work-articles :nth-child(even) {
@@ -161,6 +184,7 @@ header button {
 .article-text {
     display: flex;
     flex-direction: column;
+    position: relative;
     margin-left: 60px;
     margin-right: 70px;
 }
@@ -185,14 +209,14 @@ img {
     font-weight: bold;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
-    color: #5722CD;
+    color: var(--pink-color);
     margin-top: 20px;
 }
 
 /* ------------------------------- 4.4 services -------------------------------- */
 
 .services-container {
-display: flex;
+    display: flex;
 }
 
 .services {
@@ -213,17 +237,18 @@ display: flex;
 
 h5 {
     margin-bottom: 10px;
-    color: #5722CD;
+    color: var(--purple-color);
 }
 
 .tile {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    flex-basis: 200px;
     border: #5722CD solid 1px;
     padding: 20px;
     margin: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,1.2);
+    color: var(--grey-color);
 }
 
 .tile img {
@@ -231,6 +256,85 @@ h5 {
     margin-bottom: 5px;
 }
 
+/* ------------------------------- 4.5 Form -------------------------------- */
+.form-container {
+    display: flex;
+    background: linear-gradient(90deg, rgba(72,69,228,1) 35%, rgba(87,34,205,1) 100%);
+    color: white;
+    margin-top: 20px;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 1600px;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    font-size: xx-small;
+    margin: 10px;
+}
+
+#name {
+    font-size: x-small;
+    padding: 5px;
+}
+
+#email {
+    font-size: x-small;
+    padding: 5px;
+}
+
+#message{
+    font-size: x-small;
+    padding: 5px;
+}
+
+.form-content p{
+    font-size: x-small;
+    margin-top: 10px;
+}
+
+.form-content h2 {
+    margin-top: 30px;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+#form-button {
+    padding: 10px;
+    padding-inline: 50px;
+    background-color: var(--pink-color);
+    border-radius: 20px;
+    border: none;
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,5.2);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: xx-small;
+    text-transform: uppercase;
+    align-self: center;
+}
+
+/* ------------------------------- 4.6 Footer -------------------------------- */
+
+footer {
+    display: flex;
+    background-color: var(--black-color);
+    justify-content: center;
+}
+
+footer p {
+    font-size: 6px;
+    color: white;
+    margin: 5px;
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
 @media only screen and (max-width: 767px) {
