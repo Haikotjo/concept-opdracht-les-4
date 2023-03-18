@@ -41,16 +41,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --------------- 3.2 Other --------------------------- */
-
-/*.triangle {*/
-/*    width: 0;*/
-/*    height: 0;*/
-/*    border-left: 5px solid transparent;*/
-/*    border-right: 5px solid transparent;*/
-/*    border-bottom: 5px solid black;*/
-/*}*/
-
-
 /* ------------------------------- 4. Areas ---------------------------------------- */
 /* --------------- 4.1 Header ------------------------- */
 
@@ -92,6 +82,7 @@ header p {
     margin: 5px;
     color: white;
     font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
 header button {
@@ -113,25 +104,40 @@ header button {
     margin-top: 20px;
 }
 
+head ::before {
+content: "";
+    width: 0;
+    height: 0;
+    border-left: 3000px solid transparent;
+    border-top: 100px solid black;
+    display: block;
+    align-self: flex-end;;
+
+}
+
+
+
 /* --------------- 4.2 Introduction ------------------- */
 
 .intro {
     display: flex;
     flex-direction: column;
-    flex-basis: 1200px;
+    flex-basis: 648px;
     align-items: center;
-    margin-inline: 200px;
-    margin-block: 50px;
+    margin-inline: 50px;
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 .intro-container {
     display: flex;
+    justify-content: center;
 }
 
 .intro h4 {
-    text-align: center;
     margin: 10px;
     color: #5722CD;
+    text-align: center;
 }
 
 .intro a {
@@ -140,8 +146,9 @@ header button {
 }
 
 .intro p {
-    margin-block: 30px;
+    margin-top: 30px;
     font-size: smaller;
+    text-align: center;
 }
 
 /* ------------------------------- 4.3 proects -------------------------------- */
@@ -180,6 +187,7 @@ header button {
     margin-left: 50px;
     margin-right: 40px;
 }
+
 
 .article-text {
     display: flex;
